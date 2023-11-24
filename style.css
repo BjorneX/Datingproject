@@ -1,0 +1,345 @@
+@font-face {
+    font-family: medium;
+    src: url(fonter/medium.otf);
+}
+
+:root {
+    --button-height: 62px;
+    --button-width: 165px;
+}
+
+.signupbtn,
+.loginbtn {
+    height: var(--button-height);
+    width: var(--button-width);
+}
+
+:root {
+    --main-color: #100720;
+}
+
+.signupbtn,
+.loginbtn,
+.getratingbtn {
+    color: var(--main-color);
+}
+
+* {
+    box-sizing: border-box;
+    margin: 0;
+    font-family: medium;
+}
+
+.bg {
+    background-image: url(bilder/lines.png);
+    background-size: cover;
+    opacity: 0.75;
+    height: 100vh;
+}
+
+nav {
+    z-index: 99;
+    background-color: #130e17;
+    position: fixed;
+    height: 150px;
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 50px 0px 50px 0px;
+}
+
+.logo a {
+    color: #802bb1;
+    font-size: 3rem;
+    margin-left: 50px;
+    text-decoration: none;
+    font-weight: bold;
+    background: linear-gradient(to right, #802bb1, magenta);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+}
+
+nav a {
+    text-decoration: none;
+    margin: 0 4rem;
+    color: magenta;
+    font-size: 2rem;
+}
+
+.nav-items {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin-right: 50px;
+}
+
+.nav-items a:hover {
+    transform: scale(1.1);
+}
+
+.signupbtn {
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.33rem;
+    border-radius: 1rem;
+    border: none;
+    position: relative;
+    transition: 0.1s;
+    margin: 0 1rem 0 4.5rem;
+    background: var(--main-color);
+}
+
+.signupbtn::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(255, 94, 247, 1) 17.8%, rgba(2, 245, 255, 1)100.2%);
+    filter: blur(15px);
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.signupbtn:active,
+.signupbtn:focus {
+    transform: scale(0.9) rotate(3deg);
+    background: radial-gradient(circle farthest-corner at 10% 20%, rgba(255, 94, 247, 1)17.8%, rgba(2, 245, 255, 1)100.2%);
+    transition: 0.5s;
+}
+
+.loginbtn {
+    cursor: pointer;
+    color: #fff;
+    font-size: 1.33rem;
+    border-radius: 1rem;
+    border: none;
+    position: relative;
+    transition: 0.1s;
+    /*Lösning: + att jag tog bort margin-top*/
+    margin: 0 1rem;
+    background: var(--main-color);
+}
+
+.loginbtn::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(255, 94, 247, 1) 17.8%, rgba(2, 245, 255, 1)100.2%);
+    filter: blur(15px);
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.loginbtn:active,
+.loginbtn:focus {
+    transform: scale(0.9) rotate(3deg);
+    background: radial-gradient(circle farthest-corner at 10% 20%, rgba(255, 94, 247, 1)17.8%, rgba(2, 245, 255, 1)100.2%);
+    transition: 0.5s;
+}
+
+.left {
+    position: relative;
+    top: 150px;
+    z-index: -8;
+    width: 50%;
+    height: 992px;
+}
+
+.leftbg {
+    position: absolute;
+    background-color: rgb(178, 172, 162, 0.075);
+    width: 100%;
+    height: 992px;
+}
+
+/*More imgs stacked at footer*/
+.leftimg1,
+.leftimg2 {
+    position: absolute;
+    top: 64px;
+    max-width: 375px;
+    border-style: dashed;
+    border-color: gray;
+    border-radius: 25px;
+
+}
+
+.leftimg1 {
+    margin-left: 650px;
+    transform: rotate(-5deg);
+}
+
+.leftimg2 {
+    margin-left: 685px;
+    z-index: -1;
+}
+
+.leftplatform {
+    position: absolute;
+    width: 920px;
+    height: 172px;
+    background: linear-gradient(to right, #802bb1, magenta);
+    border: none;
+    border-top-right-radius: 10px;
+    border-bottom-right-radius: 10px;
+    z-index: 1;
+    top: 820px;
+    display: flex;
+    align-items: center;
+}
+
+.tinder {
+    position: absolute;
+    border-radius: 9px;
+    height: 85px;
+    width: 85px;
+    left: 43.5px;
+    bottom: 43.5px;
+}
+
+.bumble {
+    position: absolute;
+    border-radius: 17px;
+    height: 85px;
+    width: 85px;
+    left: 150.25px;
+    bottom: 43.5px;
+}
+
+.hinge {
+    position: absolute;
+    border-radius: 17px;
+    height: 85px;
+    width: 85px;
+    left: 257px;
+    bottom: 43.5px;
+}
+
+.dots {
+    position: absolute;
+    font-size: 5rem;
+    left: 362px;
+    bottom: 61px;
+}
+
+.app {
+    position: absolute;
+    font-size: 2rem;
+    left: 448px;
+}
+
+.leftpush {
+    position: absolute;
+    left: -11px;
+    margin-top: 500px;
+    margin-left: 391px;
+    width: 300px;
+    border-radius: 10px;
+    transform: scalex(-1);
+    z-index: 1;
+}
+
+.fart {
+    position: relative;
+    top: 575px;
+    left: 160px;
+    width: 350px;
+    transform: scale(-1, -1);
+}
+
+.p1,
+.p2 {
+    position: absolute;
+    left: 25px;
+    font-size: 2rem;
+    width: 60%;
+    text-align: center;
+}
+
+.p1 {
+    bottom: 650px;
+}
+
+.p2 {
+    bottom: 570px;
+    color: rgb(178, 172, 162);
+}
+
+.right {
+    position: absolute;
+    padding: 100px;
+    top: 17.5%;
+    left: 55%;
+}
+
+.rightbg {
+    z-index: -8;
+    position: absolute;
+    width: 100%;
+    height: 75vh;
+    top: 18px;
+    right: 0px;
+    background-color: #130e17;
+    border-top-left-radius: 100px;
+    border-bottom-left-radius: 100px;
+}
+
+.right h2 {
+    background: linear-gradient(to right, #802bb1, magenta);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    font-size: 9rem;
+    width: auto;
+}
+
+.clicktext {
+    font-size: 2rem;
+    color: rgb(178, 172, 162);
+}
+
+.getratingbtn {
+    height: calc(var(--button-height)*3);
+    width: calc(var(--button-width)*3);
+    cursor: pointer;
+    color: #fff;
+    font-size: 4rem;
+    text-transform: uppercase;
+    border-radius: 3rem;
+    border: none;
+    position: relative;
+    transition: 0.1s;
+    margin-top: 50px;
+    background: var(--main-color);
+}
+
+.getratingbtn::after {
+    content: '';
+    width: 100%;
+    height: 100%;
+    background-image: radial-gradient(circle farthest-corner at 10% 20%, rgba(255, 94, 247, 1) 17.8%, rgba(2, 245, 255, 1)100.2%);
+    filter: blur(45px);
+    z-index: -1;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.getratingbtn:active,
+.getratingbtn:focus {
+    transform: scale(0.9) rotate(3deg);
+    background: radial-gradient(circle farthest-corner at 10% 20%, rgba(255, 94, 247, 1)17.8%, rgba(2, 245, 255, 1)100.2%);
+    transition: 0.5s;
+}
+
+.bg2 {
+    height: 100vh;
+    width: 100%;
+    background-color: #151019;
+
+}
+
+/*extra*/

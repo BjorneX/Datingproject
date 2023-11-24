@@ -1,0 +1,211 @@
+@media screen and (max-width: 2311px) and (min-width:2121px) {
+
+    .right h2 {
+        font-size: 8.08rem;
+    }
+
+}
+
+@media screen and (max-width: 2121px) {
+
+    .left {
+        position: absolute;
+        top: 100vh;
+    }
+
+    .right {
+        width: 75%;
+        left: 0px;
+        margin-left: 12.5%;
+        margin-right: 12.5%;
+        height: auto;
+        text-align: center;
+    }
+
+    .rightbg {
+        border-radius: 100px;
+
+    }
+
+    .clicktext {
+        margin: 20px 0 20px 0;
+        font-size: 2.9rem;
+    }
+
+    .right h2,
+    .clicktext .getratingbtn {
+        margin-top: -54px;
+    }
+
+}
+
+@media screen and (max-width: 2121px) and (min-width:1925px) {
+
+    .clicktext {
+        font-size: 3.2rem;
+    }
+
+    .right h2,
+    .clicktext .getratingbtn {
+        margin-top: -65px;
+    }
+
+}
+
+@media screen and (max-width: 1925px) and (min-width:1594px) {
+    .clicktext {
+        font-size: 2.5rem;
+    }
+}
+
+@media screen and (max-width: 1594px) and (min-width:1387px) {
+
+    .clicktext {
+        font-size: 2.3rem;
+    }
+}
+
+/* Hamburger menu*/
+
+@media screen and (max-width: 1445px) and (min-width:0px) {
+
+    *,
+    *::after,
+    *::before {
+        box-sizing: border-box;
+    }
+
+    body {
+        margin: 0;
+    }
+
+    :root {
+        --bar-width: 60px;
+        --bar-height: 8px;
+        --hamburger-gap: 6px;
+        --foreground: magenta;
+        --background: white;
+        --hamburger-margin: 8px;
+        --animation-timing: 200ms ease-in-out;
+        --hamburger-height: calc(var(--bar-height) * 3 + var(--hamburger-gap) * 2);
+    }
+
+    .hamburger-menu {
+        --x-width: calc(var(--hamburger-height) * 1.41421356237);
+
+        display: flex;
+        flex-direction: column;
+        gap: var(--hamburger-gap);
+        width: max-content;
+        position: absolute;
+        top: var(--hamburger-margin);
+        left: var(--hamburger-margin);
+        z-index: 2;
+        cursor: pointer;
+    }
+
+    .hamburger-menu:has(input:checked) {
+        --foreground: white;
+        --background: #333;
+    }
+
+    .hamburger-menu:has(input:focus-visible)::before,
+    .hamburger-menu:has(input:focus-visible)::after,
+    .hamburger-menu input:focus-visible {
+        border: 1px solid var(--background);
+        box-shadow: 0 0 0 1px var(--foreground);
+    }
+
+    .hamburger-menu::before,
+    .hamburger-menu::after,
+    .hamburger-menu input {
+        content: "";
+        width: var(--bar-width);
+        height: var(--bar-height);
+        background-color: var(--foreground);
+        border-radius: 9999px;
+        transform-origin: left center;
+        transition: opacity var(--animation-timing), width var(--animation-timing),
+            rotate var(--animation-timing), translate var(--animation-timing),
+            background-color var(--animation-timing);
+    }
+
+    .hamburger-menu input {
+        appearance: none;
+        padding: 0;
+        margin: 0;
+        outline: none;
+        pointer-events: none;
+    }
+
+    .hamburger-menu:has(input:checked)::before {
+        rotate: 45deg;
+        width: var(--x-width);
+        translate: 0 calc(var(--bar-height) / -2);
+    }
+
+    .hamburger-menu:has(input:checked)::after {
+        rotate: -45deg;
+        width: var(--x-width);
+        translate: 0 calc(var(--bar-height) / 2);
+    }
+
+    .hamburger-menu input:checked {
+        opacity: 0;
+        width: 0;
+    }
+
+    .sidebar {
+        transition: translate var(--animation-timing);
+        translate: -100%;
+        padding: 0.5rem 1rem;
+        padding-top: calc(var(--hamburger-height) + var(--hamburger-margin) + 1rem);
+        background-color: var(--foreground);
+        color: var(--background);
+        max-width: 10rem;
+        min-height: 100vh;
+    }
+
+    .hamburger-menu:has(input:checked)+.sidebar {
+        translate: 0;
+    }
+
+}
+
+@media screen and (max-width: 1387px) and (min-width:1170px) {
+
+    .right h2 {
+        font-size: 7.26rem;
+    }
+
+    .clicktext {
+        font-size: 1.98rem;
+    }
+
+    .right h2,
+    .clicktext .getratingbtn {
+        margin-top: -5px;
+    }
+}
+
+@media screen and (max-width: 1170px) and (min-width:1060px) {
+    .right h2 {
+        font-size: 6.37rem;
+    }
+
+    .clicktext {
+        font-size: 1.55rem;
+    }
+
+    .right h2,
+    .clicktext .getratingbtn {
+        margin-top: 10px;
+    }
+}
+
+@media screen and (max-width: 1060px) and (min-width:600px) {
+    body {
+        background-color: aqua;
+    }
+
+}
